@@ -17,7 +17,8 @@ p{
 
 .logos{
     margin: 1rem;
+    margin-right: 2rem;
     justify-content: space-between;
     display: flex;
-    gap: 0.3rem;
+    gap: 1rem;
 }
