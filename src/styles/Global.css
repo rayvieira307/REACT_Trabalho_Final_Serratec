@@ -9,4 +9,5 @@ body,html, #root{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: azure;
 }

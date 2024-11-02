@@ -21,11 +21,11 @@ export default function Login() {
             <button className={styles.buttonLogin}>Login</button>
             </Link>
           </form>
-          <Link to={"/cadastrar"} >
-          <button className={styles.buttonCadastrar}>Cadastrar</button>
-          </Link>
         </div>
       </div>
+      <Link to={"/cadastrar"} >
+          <button className={styles.buttonCadastrar}>Cadastrar</button>
+          </Link>
     </main>
   );
 }
