@@ -1,0 +1,14 @@
+.cabecalho{
+    background: linear-gradient(90deg, #006DFB, #FE0062);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'jomolhari', sans-serif;
+    font-size: 1.5rem;
+}
+
+.logo{
+    height: 6rem;
+    margin-right: 2rem;
+}
