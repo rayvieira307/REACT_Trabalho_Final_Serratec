@@ -17,8 +17,14 @@
 
 .perfil {
     position: absolute;
+    transition: tranform 0.3s ease, opacity 0.3s ease;
     top: -8px;
     right: 30px;
     height: 7rem;
     width: 65px;
+}
+
+.perfil:hover {
+    transform: scale(1.1);
+    transform: rotate(15deg);
 }
