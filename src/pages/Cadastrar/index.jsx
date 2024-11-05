@@ -10,7 +10,11 @@ const validationPost = yup.object().shape({
   nome: yup
     .string()
     .required("O nome deve ser preenchido.")
-    .max(30, "Tamanho máximo de 30 caracteres"),
+    .max(20, "Tamanho máximo de 20 caracteres"),
+  sobrenome: yup
+    .string()
+    .required("O sobrenome deve ser preenchido.")
+    .max(40, "Tamanho máximo de 40 caracteres"),
   email: yup
     .string()
     .required("O email deve ser preenchido.")
@@ -26,8 +30,14 @@ const validationPost = yup.object().shape({
     .max(30, "Tamanho máximo de 12 caracteres")
     .min(8, "Minimo de 8 caracteres."),
   dataNascimento: yup
-    .date()
-    .required("A data de nascimento deve ser preechida."),
+  .mixed()
+  .required("A data de nascimento deve ser preenchida")
+  .test("is-valid-date", "Data de nascimento inválida", value => {
+    if (!value) return false;
+    const date = new Date(value);
+    return !isNaN(date.getTime()) && date <= new Date();
+    
+  })
 });
 
 export default function Cadastrar() {
@@ -55,7 +65,7 @@ export default function Cadastrar() {
           <form onSubmit={handleSubmit(addUsuario)}>
             <div className={styles.linha1}>
               <div className={styles.nomeInput}>
-                <label htmlFor="nome">Nome Completo</label>
+                <label htmlFor="nome">Nome</label>
                 <input
                   type="text"
                   name="nome"
@@ -64,6 +74,19 @@ export default function Cadastrar() {
                 />
                 <p className={styles.errorMessage}>{errors.nome?.message}</p>
               </div>
+              <div className={styles.sobrenomeInput}>
+                <label>Sobrenome</label>
+                <input
+                  type="text"
+                  name="sobrenome"
+                  id="sobrenome"
+                  {...register("sobrenome")}
+                />
+                <p className={styles.errorMessage}>{errors.sobrenome?.message}</p>
+              </div>
+            </div>
+
+            <div className={styles.linha2}>
               <div className={styles.emailInput}>
                 <label>Email</label>
                 <input
@@ -74,9 +97,21 @@ export default function Cadastrar() {
                 />
                 <p className={styles.errorMessage}>{errors.email?.message}</p>
               </div>
+              <div className={styles.dataNascimentoInput}>
+                <label>Data Nascimento</label>
+                <input
+                  type="date"
+                  name="dataNascimento"
+                  id="dataNascimento"
+                  {...register("dataNascimento")}
+                />
+                <p className={styles.errorMessage}>
+                  {errors.dataNascimento?.message}
+                </p>
+              </div>
             </div>
 
-            <div className={styles.linha2}>
+            <div className={styles.linha3}>
               <div className={styles.senhaInput}>
                 <label>Senha</label>
                 <input
@@ -85,10 +120,12 @@ export default function Cadastrar() {
                   id="senha"
                   {...register("senha")}
                 />
-                <p className={styles.errorMessage}>{errors.senha?.message}</p>
+                <p className={styles.errorMessage}>
+                  {errors.senha?.message}
+                </p>
               </div>
               <div className={styles.confirmaSenhaInput}>
-                <label>Confirmar Senha</label>
+                <label>Confirma Senha</label>
                 <input
                   type="password"
                   name="confirmaSenha"
@@ -99,20 +136,6 @@ export default function Cadastrar() {
                   {errors.confirmaSenha?.message}
                 </p>
               </div>
-            </div>
-
-            <div className={styles.dataNascimentoInput}>
-              <label>Data de Nascimento</label>
-
-              <input
-                type="date"
-                name="dataNascimento"
-                id="dataNascimento"
-                {...register("dataNascimento")}
-              />
-              <p className={styles.errorMessage}>
-                {errors.dataNascimento?.message}
-              </p>
             </div>
             <button className={styles.buttonEnviar} type="submit">
               Enviar
