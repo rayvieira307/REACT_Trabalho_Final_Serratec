@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as styles from "./Cadastrar.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -31,7 +31,7 @@ const validationPost = yup.object().shape({
 });
 
 export default function Cadastrar() {
-  let navigate = useNavigate;
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -55,7 +55,7 @@ export default function Cadastrar() {
           <form onSubmit={handleSubmit(addUsuario)}>
             <div className={styles.linha1}>
               <div className={styles.nomeInput}>
-                <label htmlFor="nome">Nome</label>
+                <label htmlFor="nome">Nome Completo</label>
                 <input
                   type="text"
                   name="nome"
@@ -87,35 +87,39 @@ export default function Cadastrar() {
                 />
                 <p className={styles.errorMessage}>{errors.senha?.message}</p>
               </div>
-              <div className={styles.confirmarSenhaInput}>
+              <div className={styles.confirmaSenhaInput}>
                 <label>Confirmar Senha</label>
                 <input
                   type="password"
-                  name="confimarSenha"
-                  id="confimarSenha"
-                  {...register("confimarSenha")}
+                  name="confirmaSenha"
+                  id="confirmaSenha"
+                  {...register("confirmaSenha")}
                 />
-                    <p className={styles.errorMessage}>{errors.confirmaSenha?.message}</p>
+                <p className={styles.errorMessage}>
+                  {errors.confirmaSenha?.message}
+                </p>
               </div>
             </div>
 
             <div className={styles.dataNascimentoInput}>
               <label>Data de Nascimento</label>
+
               <input
-                type="text"
+                type="date"
                 name="dataNascimento"
                 id="dataNascimento"
                 {...register("dataNascimento")}
               />
-              <p className={styles.errorMessage}>{errors.dataNascimento?.message}</p>
+              <p className={styles.errorMessage}>
+                {errors.dataNascimento?.message}
+              </p>
             </div>
+            <button className={styles.buttonEnviar} type="submit">
+              Enviar
+            </button>
           </form>
         </div>
       </div>
-
-      <button className={styles.buttonEnviar} type="submit">
-        Enviar
-      </button>
     </main>
   );
 }
