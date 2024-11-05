@@ -1,6 +1,7 @@
 footer {
   background-color: #052959;
   display: flex;
+  flex-wrap: wrap;
   color: #fff;
   justify-content: space-between;
   align-items: center;
@@ -21,4 +22,20 @@ p{
     justify-content: space-between;
     display: flex;
     gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 2rem; 
+  }
+
+  p {
+    margin-left: 2rem; 
+    font-size: 0.9rem;
+  }
+
+  .logos {
+    gap: 0.5rem; 
+    margin-right: 1rem; 
+  }
 }
