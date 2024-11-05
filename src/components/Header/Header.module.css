@@ -1,6 +1,7 @@
 .cabecalho{
     background: linear-gradient(90deg, #006DFB, #FE0062);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -28,3 +29,20 @@
     transform: scale(1.1);
     transform: rotate(15deg);
 }
+
+@media (max-width: 768px) {
+    .cabecalho {
+      font-size: 1.2rem; 
+    }
+  
+    .logo {
+      height: 4rem; 
+      left: 10px; 
+    }
+  
+    .perfil {
+      height: 5rem; 
+      width: 50px; 
+      right: 10px; 
+    }
+  }
