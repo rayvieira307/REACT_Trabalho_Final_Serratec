@@ -1,0 +1,45 @@
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.perfil {
+  background: linear-gradient(180deg, #006dfb 0%, #fe0062 100%);
+    width: 380px;
+    height: 400px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+ }
+
+ .foto_usuario{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+ }
+
+ .posts {
+    margin-bottom: 30px;
+    padding: 30px;
+   
+  }
+  
+  .post_card {
+    margin: 15px;
+    background: linear-gradient(180deg, #006dfb 0%, #fe0062 100%);
+    color: white;
+    padding: 70px;
+    
+  }
+  
+  h3 {
+    color: #fff;
+    padding-top: 40px;
+    font-family: Arial;
+  
+  }
