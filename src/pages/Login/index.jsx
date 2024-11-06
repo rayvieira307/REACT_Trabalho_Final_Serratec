@@ -15,7 +15,7 @@ export default function Login() {
     try {
       const res = await axios.post('http://localhost:8080/login', {
           username,
-          senha
+          senha,
       });
         console.log(res.headers.authorization);
         
@@ -64,7 +64,7 @@ export default function Login() {
               Login
             </button>
           </form>
-          {erro && <p style={{ color: "red" }}>{erro}</p>}
+          {erro && <p style={{ color: "yellow" }}>{erro}</p>}
         </div>
       </div>
       <Link to={"/cadastrar"}>
