@@ -44,7 +44,7 @@ export default function Login() {
           <form onSubmit={handleSubmit}>
             <div className={styles.emailInput}>
               <label>Email</label>
-              <input
+              <input className={styles.inputEmail}
                 type="email"
                 name="username"
                 value={username}
@@ -54,7 +54,7 @@ export default function Login() {
             </div>
             <div className={styles.senhaInput}>
               <label>Senha</label>
-              <input
+              <input className={styles.inputSenha}
                 type="password"
                 name="senha"
                 value={senha}

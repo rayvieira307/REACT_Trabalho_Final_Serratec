@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+div{
+    display: grid;
+}
+
 body,html, #root{
     height: 100vh;
     display: flex;

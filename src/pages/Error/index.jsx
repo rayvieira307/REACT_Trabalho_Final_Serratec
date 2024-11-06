@@ -1,4 +1,5 @@
 import * as styles from "./error.module.css";
+import marioTriste from "../../assets/mario-mario-depressed.gif"
 
 export default function Error() {
   return (
@@ -11,6 +12,7 @@ export default function Error() {
           <div className={styles.aviso}>
             <p>Página não encontrada! verifique o caminho!</p>
           </div>
+        <img className={styles.gif}  src={marioTriste} alt="gif" />
         </div>
       </div>
     </div>

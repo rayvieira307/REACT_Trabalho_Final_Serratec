@@ -67,89 +67,89 @@ export default function Cadastrar() {
 
   return (
     <main className={styles.container}>
-      <div className={styles.principal}>
-        <div className={styles.cadastro}>
-          <form onSubmit={handleSubmit(addUsuario)}>
-            <div className={styles.linha1}>
-              <div className={styles.nomeInput}>
-                <label htmlFor="nome">Nome</label>
-                <input
-                  type="text"
-                  name="nome"
-                  id="nome"
-                  {...register("nome")}
-                />
-                <p className={styles.errorMessage}>{errors.nome?.message}</p>
-              </div>
-              <div className={styles.sobrenomeInput}>
-                <label>Sobrenome</label>
-                <input
-                  type="text"
-                  name="sobrenome"
-                  id="sobrenome"
-                  {...register("sobrenome")}
-                />
-                <p className={styles.errorMessage}>{errors.sobrenome?.message}</p>
-              </div>
+    <div className={styles.principal}>
+      <div className={styles.cadastro}>
+        <form onSubmit={handleSubmit(addUsuario)}>
+          <div className={styles.linha1}>
+            <div className={styles.nomeInput}>
+              <label htmlFor="nome">Nome</label>
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                {...register("nome")}
+              />
+              <p className={styles.errorMessage}>{errors.nome?.message}</p>
             </div>
+            <div className={styles.sobrenomeInput}>
+              <label>Sobrenome</label>
+              <input
+                type="text"
+                name="sobrenome"
+                id="sobrenome"
+                {...register("sobrenome")}
+              />
+              <p className={styles.errorMessage}>{errors.sobrenome?.message}</p>
+            </div>
+          </div>
 
-            <div className={styles.linha2}>
-              <div className={styles.emailInput}>
-                <label>Email</label>
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  {...register("email")}
-                />
-                <p className={styles.errorMessage}>{errors.email?.message}</p>
-              </div>
-              <div className={styles.dataNascimentoInput}>
-                <label>Data Nascimento</label>
-                <input
-                  type="date"
-                  name="dataNascimento"
-                  id="dataNascimento"
-                  {...register("dataNascimento")}
-                />
-                <p className={styles.errorMessage}>
-                  {errors.dataNascimento?.message}
-                </p>
-              </div>
+          <div className={styles.linha2}>
+            <div className={styles.emailInput}>
+              <label>Email</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                {...register("email")}
+              />
+              <p className={styles.errorMessage}>{errors.email?.message}</p>
             </div>
+            <div className={styles.dataNascimentoInput}>
+              <label>Data Nascimento</label>
+              <input
+                type="date"
+                name="dataNascimento"
+                id="dataNascimento"
+                {...register("dataNascimento")}
+              />
+              <p className={styles.errorMessage}>
+                {errors.dataNascimento?.message}
+              </p>
+            </div>
+          </div>
 
-            <div className={styles.linha3}>
-              <div className={styles.senhaInput}>
-                <label>Senha</label>
-                <input
-                  type="password"
-                  name="senha"
-                  id="senha"
-                  {...register("senha")}
-                />
-                <p className={styles.errorMessage}>
-                  {errors.senha?.message}
-                </p>
-              </div>
-              <div className={styles.confirmaSenhaInput}>
-                <label>Confirma Senha</label>
-                <input
-                  type="password"
-                  name="confirmaSenha"
-                  id="confirmaSenha"
-                  {...register("confirmaSenha")}
-                />
-                <p className={styles.errorMessage}>
-                  {errors.confirmaSenha?.message}
-                </p>
-              </div>
+          <div className={styles.linha3}>
+            <div className={styles.senhaInput}>
+              <label>Senha</label>
+              <input
+                type="password"
+                name="senha"
+                id="senha"
+                {...register("senha")}
+              />
+              <p className={styles.errorMessage}>
+                {errors.senha?.message}
+              </p>
             </div>
-            <button className={styles.buttonEnviar} type="submit">
-              Enviar
-            </button>
-          </form>
-        </div>
+            <div className={styles.confirmaSenhaInput}>
+              <label>Confirma Senha</label>
+              <input
+                type="password"
+                name="confirmaSenha"
+                id="confirmaSenha"
+                {...register("confirmaSenha")}
+              />
+              <p className={styles.errorMessage}>
+                {errors.confirmaSenha?.message}
+              </p>
+            </div>
+          </div>
+          <button className={styles.buttonEnviar} type="submit">
+            Enviar
+          </button>
+        </form>
       </div>
-    </main>
+    </div>
+  </main>
   );
 }
