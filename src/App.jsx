@@ -7,9 +7,9 @@ import { BrowserRouter } from "react-router-dom";
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <Header titulo = "PlayConnect"/>
         <AppRoute/>
-      <Footer/>
+      <Footer rodape = "&copy; Direitos reservados a PlayConnect"/>
     </BrowserRouter>
   );
 }

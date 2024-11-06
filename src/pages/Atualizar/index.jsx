@@ -27,7 +27,7 @@ export default function Atualizar() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/post/${id}`, {
+      .get(`http://localhost:8080/postagens/${id}`, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
@@ -44,7 +44,7 @@ export default function Atualizar() {
     console.log({ id });
 
     axios
-      .put(`http://localhost:8080/post/${id}`, data, {
+      .put(`http://localhost:8080/postagens/${id}`, data, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
@@ -64,7 +64,7 @@ export default function Atualizar() {
           <form onSubmit={handleSubmit(altPost)}>
             <div className={styles.conteudoInput}>
               <label htmlFor="conteudo">Conteúdo</label>
-              <textarea
+              <input
                 type="text"
                 name="conteudo"
                 id="conteudo"

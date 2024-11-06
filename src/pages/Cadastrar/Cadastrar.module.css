@@ -13,11 +13,19 @@ main.container {
   width: 50rem;
   height: 22rem;
 
-  background: linear-gradient(180deg, #006dfb 0%, #fe0062 100%);
+  background: #232534;
   border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  box-shadow: 
+  0 0 0.1rem #006dfb, 
+  0 0 0.7rem #fe0062, 
+  0 0 1rem #fe0062, 
+  0 0 2rem #006dfb;
   
+}
+
+.cadastro{
+  margin-top: 2rem;
 }
 
 .linha1 {
@@ -102,14 +110,10 @@ justify-content: space-around;
   transition: background-color 0.5s ease, transform 0.3s ease; 
 }
 
-.buttonEnviar:hover {
-  background-color: #572bbd;
-  transform: translateY(-3px);
-}
 
 .buttonEnviar:hover {
-  transition: background-color all ;
-  background-color: #006dfb;
+  transform: translateY(-3px);
+  background-color: #fe0062;
 }
 
 .errorMessage{
