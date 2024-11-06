@@ -5,14 +5,11 @@ main.container {
   padding-bottom: 3rem;
 }
 
-
-
 .principal {
   display: flex;
   justify-content: center;
   width: 50rem;
   height: 22rem;
-
   background: linear-gradient(180deg, #006dfb 0%, #fe0062 100%);
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -27,6 +24,7 @@ justify-content: space-around;
 }
 
 .nomeInput {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,6 +33,7 @@ justify-content: space-around;
 }
 
 .sobrenomeInput {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,11 +106,6 @@ justify-content: space-around;
   transform: translateY(-3px);
 }
 
-.buttonEnviar:hover {
-  transition: background-color all ;
-  background-color: #006dfb;
-}
-
 .errorMessage{
   font-size: 1rem;
   color: #e4e805;
@@ -131,40 +125,44 @@ label{
 
 @media (max-width: 768px) {
 
+
+  .nomeInput, .sobrenomeInput, .emailInput{
+    margin-top: -1px;
+  }
   .principal {
-    margin-top: 25px;
+    display: flex;
     flex-direction: column; 
     align-items: center; 
     width: 80%;
     height: 95%;
-    
+  
   }
 
   .linha1,
   .linha2 {
-    flex-direction: column; 
-    align-items: center; 
-    margin-bottom: -10px;
-  }
-
-  .nomeInput,
-  .emailInput,
-  .senhaInput,
-  .confirmaSenhaInput,
-  .dataNascimentoInput {
-    width: 100%; 
-    max-width: 20rem; 
-  }
-
+    flex-direction: column;  
+    margin-bottom: -30px;
+    margin-top: 30px;
+  } 
+ 
   .buttonEnviar {
     width: 100%;
     max-width: 10rem; 
     margin-top: 10px;
-    margin-left: 90px; 
+    margin-left: 110px; 
   }
+
+  
+.linha3 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
  
   .dataNascimentoInput {
-    margin-left: 14px;
+    margin-left: 12px;
   }
 
 }
