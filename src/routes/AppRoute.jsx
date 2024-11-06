@@ -6,6 +6,7 @@ import Home from '../pages/Home'
 import Perfil from '../pages/Perfil'
 import Post from '../pages/Post'
 import Error from '../pages/Error'
+import Atualizar from '../pages/Atualizar'
 
 
 
@@ -18,6 +19,7 @@ export default function AppRoute() {
         <Route path='/perfil' element={<Perfil/>}></Route>
         <Route path='/post' element={<Post/>}></Route>
         <Route path='/*' element={<Error/>}></Route>
+        <Route path='/atualizar/:id' element={<Atualizar/>}></Route>
     </Routes>
   )
 }
