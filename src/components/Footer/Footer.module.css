@@ -1,0 +1,41 @@
+footer {
+  background-color: #052959;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+p{
+  margin-left: 20rem;
+}
+
+.logos{
+    margin: 1rem;
+    margin-right: 1rem;
+    justify-content: space-between;
+    display: flex;
+    gap: 0.3rem
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 2rem; 
+  }
+
+  p {
+    margin-left: 2rem; 
+    font-size: 0.9rem;
+  }
+
+  .logos {
+    gap: 0.5rem; 
+    margin-right: 1rem; 
+  }
+}
