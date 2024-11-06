@@ -24,6 +24,8 @@ export default function Login() {
       localStorage.setItem('token', token)
       localStorage.setItem('username', username)
       navegate("/home")
+      console.log(username.id);
+      
 
       console.log(token);
   } catch (err) {

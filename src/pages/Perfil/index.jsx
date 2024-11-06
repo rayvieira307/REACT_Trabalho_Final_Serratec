@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as styles from "./Perfil.module.css";
 import axios from "axios";
 import { Link } from "react-router-dom/dist";
-import amarillo from "../../assets/amarillo.jpg"
+import perfil from "../../assets/usuario.png"
 
 export default function Perfil() {
   const [posts, setPosts] = useState([]);
@@ -25,7 +25,7 @@ export default function Perfil() {
       });
   }, []);
 
-  function apagar(id){
+  function apagarPost(id){
     axios.delete(`http://localhost:8080/post/${id}`)
     .then(() => {
       console.log("Post apagado!!!");
@@ -33,14 +33,25 @@ export default function Perfil() {
     })
 }
 
+
+const contagem = () =>{
+  if (posts.length == 0) {
+    return "Você não possui posts ainda"
+  }
+  return `Você tem: ${posts.length} posts`
+}
+
   return (
     <main className={styles.container}>
         <div className={styles.perfil}>
           <div className={styles.foto_usuario}>
-            <img className={styles.fotoPerfil} src={amarillo} alt="perfil" />
+            <img className={styles.fotoPerfil} src={perfil} alt="perfil" />
           </div>
           <h3>{username}</h3>
-        <button className={styles.btnAtualizarPerfil}>Atualizar</button>
+            <p className={styles.contagem}>{contagem()}</p>
+          <Link to={"/post"}>
+        <button className={styles.btnAtualizarPerfil}>Novo Post</button>  
+          </Link>
         </div>
         <div className={styles.post}>
           {posts.map((post, key) => (
@@ -51,7 +62,7 @@ export default function Perfil() {
               <Link to={`/atualizar/${post.id}`}>
               <button className={styles.btnAtualizar}>Atualizar</button>
               </Link>
-              <button className={styles.btnDeletar} onClick={() => apagar(post.id)}>Deletar</button>
+              <button className={styles.btnDeletar} onClick={() => apagarPost(post.id)}>Deletar</button>
               </div>
           ))}
         </div>
