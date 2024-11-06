@@ -29,7 +29,7 @@ export default function Atualizar() {
     axios
       .get(`http://localhost:8080/post/${id}`, {
         headers: {
-          Authorization: { token },
+          Authorization: localStorage.getItem("token"),
         },
       })
 
@@ -44,16 +44,11 @@ export default function Atualizar() {
     console.log({ id });
 
     axios
-      .put(
-        `http://localhost:8080/post/${id}`,
-        data,
-        localStorage.getItem("username"),
-        {
-          headers: {
-            Authorization: { token },
-          },
-        }
-      )
+      .put(`http://localhost:8080/post/${id}`, data, {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      })
       .then(() => {
         console.log(data + "teste");
 

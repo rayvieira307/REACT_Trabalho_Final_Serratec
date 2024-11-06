@@ -22,6 +22,7 @@ export default function Login() {
       const token = res.headers.authorization
 
       localStorage.setItem('token', token)
+      localStorage.setItem('username', username)
       navegate("/home")
 
       console.log(token);

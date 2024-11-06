@@ -9,13 +9,10 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 3rem;  
+  margin-top: 3rem;
   text-align: center;
-  box-shadow: 
-        0 0 0.1rem #fe0062, 
-        0 0 0.7rem #fe0062, 
-        0 0 1rem #fe0062, 
-        0 0 2rem #fe0062;
+  box-shadow: 0 0 0.1rem #fe0062, 0 0 0.7rem #fe0062, 0 0 1rem #fe0062,
+    0 0 2rem #fe0062;
 }
 
 .formulario {
@@ -48,7 +45,6 @@ input {
 label {
   color: #fff;
   font-size: 1.5rem;
-  
 }
 
 .emailInput {
@@ -69,17 +65,17 @@ label {
 }
 
 .buttonLogin {
-    color: #fff;
-    background-color: #245ee5;
-    border-radius: 10px;
-    border: none;
-    height: 2.5rem;
-    width: 10rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  background-color: #245ee5;
+  border-radius: 10px;
+  border: none;
+  height: 2.5rem;
+  width: 10rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .buttonCadastrar {
@@ -106,14 +102,9 @@ label {
   transform: translateY(-3px);
 }
 
-
 @media (max-width: 768px) {
-
   .formulario {
-
     width: 110%;
     height: 200%;
-    
   }
 }
-

@@ -26,7 +26,7 @@ export default function Post() {
     await axios
       .post("http://localhost:8080/post", data, {
         headers: {
-          Authorization: { token },
+          Authorization: localStorage.getItem('token'),
         },
       })
       .then(() => {
