@@ -39,6 +39,11 @@
   margin-bottom: 10px;
  }
 
+ .contagem{
+  margin-top: 0.5rem;
+  color: #fff;
+ }
+
  .posts {
     margin-bottom: 30px;
     padding: 30px;
