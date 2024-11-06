@@ -5,6 +5,11 @@ main {
     flex-direction: column;
   }
   
+  .global{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .card {
     margin-top: 10vh;
     display: flex;

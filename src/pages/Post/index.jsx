@@ -44,7 +44,7 @@ export default function Post() {
           <form onSubmit={handleSubmit(addPost)}>
             <div className={styles.conteudoInput}>
               <label htmlFor="conteudo">Conteúdo</label>
-              <textarea
+              <input className={styles.inputConteudo}
                 type="text"
                 name="conteudo"
                 id="conteudo"

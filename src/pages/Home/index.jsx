@@ -22,24 +22,28 @@ export default function Home() {
 
   return (
     <main>
-      <div className={styles.cards}>
-        {posts.map((post, key) => (
-          <div className={styles.card} key={key}>
-            <div className={styles.user}>
-              <h3 className={styles.nomeUsuario}>{post.postUsuarioDTO.nome + post.postUsuarioDTO.sobrenome}</h3>
+      <div className={styles.global}>
+        <div className={styles.cards}>
+          {posts.map((post, key) => (
+            <div className={styles.card} key={key}>
+              <div className={styles.user}>
+                <h3 className={styles.nomeUsuario}>
+                  {post.postUsuarioDTO.nome + post.postUsuarioDTO.sobrenome}
+                </h3>
+              </div>
+              <div className={styles.post}>
+                <p className={styles.conteudo}>{post.conteudo}</p>
+              </div>
+              <div className={styles.buttonComment}>
+                <FaComment className={styles.comment} />
+              </div>
             </div>
-            <div className={styles.post}>
-              <p className={styles.conteudo}>{post.conteudo}</p>
-            </div>
-            <div className={styles.buttonComment}>
-              <FaComment className={styles.comment} />
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
         <Link to={"/post"}>
-        <button className={styles.btnPost}>Novo Post</button>
+          <button className={styles.btnPost}>Novo Post</button>
         </Link>
+      </div>
     </main>
   );
 }
