@@ -10,4 +10,5 @@ body,html, #root{
     flex-direction: column;
     justify-content: space-between;
     background-color: azure;
+    background-color: #1a1b26;
 }

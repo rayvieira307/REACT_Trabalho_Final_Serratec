@@ -35,8 +35,7 @@ const validationPost = yup.object().shape({
   .test("is-valid-date", "Data de nascimento inválida", value => {
     if (!value) return false;
     const date = new Date(value);
-    return !isNaN(date.getTime()) && date <= new Date();
-    
+    return !isNaN(date.getTime()) && date <= new Date(); 
   })
 });
 
@@ -49,8 +48,16 @@ export default function Cadastrar() {
   } = useForm({ resolver: yupResolver(validationPost) });
 
   const addUsuario = (data) => {
+    const dataObj = new Date(data.dataNascimento);
+    const dataFormatada = dataObj.toLocaleDateString("pt-BR");
+
+    const dataParaEnvio = {
+      ...data,
+      dataNascimento: dataFormatada,
+    };
+
     axios
-      .post("https://localhost:8080/usuarios", data)
+      .post("http://localhost:8080/usuarios", data)
       .then(() => {
         console.log("Deu certo");
         navigate("/");

@@ -1,0 +1,78 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .card {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .post {
+    padding: 2rem;
+    border: 5px solid transparent;
+    border-image: linear-gradient(90deg, #006dfb, #fe0062) 1;
+    height: 15rem;
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 
+          0 0 0.1rem #fe0062, 
+          0 0 0.7rem #fe0062, 
+          0 0 1rem #fe0062, 
+          0 0 2rem #fe0062;
+  }
+  
+  .user {
+    color: #fff;
+    font-weight: 500;
+    border: #fff 1px solid;
+    border-radius: 20px;
+    margin: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .comment {
+    width: 2rem;
+    height: 5rem;
+    color: #fff;
+  }
+  
+  .conteudo {
+    margin: 0;
+  }
+  
+  .nomeUsuario{
+    padding: 0;
+  }
+
+  .btnPost{
+    background-color: #1a1b26;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    width: 9rem;
+    height: 5rem;
+    z-index: 10;
+    top: 30rem;
+    right: 2rem;
+    position: fixed;
+    box-shadow: 
+          0 0 0.1rem #fe0062, 
+          0 0 0.7rem #fe0062, 
+          0 0 1rem #fe0062, 
+          0 0 2rem #fe0062;
+    cursor: pointer;
+  }
